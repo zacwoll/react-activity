@@ -16,6 +16,10 @@ export class StateHandlerRoom extends Room<State> {
     this.onMessage('stopTalking', (client, _data) => {
       this.state.stopTalking(client.sessionId);
     });
+
+    this.onMessage('move', (client, _data) => {
+      this.state.movePlayer(client.sessionId, _data);
+    })
   }
 
   onAuth(_client: any, _options: any, _req: any) {

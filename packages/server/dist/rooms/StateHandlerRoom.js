@@ -17,6 +17,9 @@ class StateHandlerRoom extends colyseus_1.Room {
         this.onMessage('stopTalking', (client, _data) => {
             this.state.stopTalking(client.sessionId);
         });
+        this.onMessage('move', (client, _data) => {
+            this.state.movePlayer(client.sessionId, _data);
+        });
     }
     onAuth(_client, _options, _req) {
         return true;

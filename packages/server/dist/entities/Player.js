@@ -17,6 +17,8 @@ class Player extends schema_1.Schema {
         this.avatarUri = avatarUri;
         this.name = name;
         this.sessionId = sessionId;
+        this.x = Math.round(Math.random() * 1000);
+        this.y = Math.round(Math.random() * 1000);
     }
 }
 exports.Player = Player;
@@ -35,3 +37,9 @@ __decorate([
 __decorate([
     (0, schema_1.type)('boolean')
 ], Player.prototype, "talking", void 0);
+__decorate([
+    (0, schema_1.type)('number')
+], Player.prototype, "x", void 0);
+__decorate([
+    (0, schema_1.type)('number')
+], Player.prototype, "y", void 0);

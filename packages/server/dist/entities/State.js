@@ -45,6 +45,13 @@ class State extends schema_1.Schema {
             player.talking = false;
         }
     }
+    movePlayer(sessionId, movement) {
+        const player = this._getPlayer(sessionId);
+        if (player != null) {
+            player.x += movement.x;
+            player.y += movement.y;
+        }
+    }
 }
 exports.State = State;
 __decorate([
