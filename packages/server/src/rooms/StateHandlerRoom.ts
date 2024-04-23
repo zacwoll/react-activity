@@ -20,6 +20,10 @@ export class StateHandlerRoom extends Room<State> {
     this.onMessage('move', (client, _data) => {
       this.state.movePlayer(client.sessionId, _data);
     })
+
+    this.onMessage('mouseMove', (client, _data) => {
+      this.state.movePlayerMouse(client.sessionId, _data);
+    })
   }
 
   onAuth(_client: any, _options: any, _req: any) {

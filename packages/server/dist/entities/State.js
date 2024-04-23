@@ -52,6 +52,13 @@ class State extends schema_1.Schema {
             player.y += movement.y;
         }
     }
+    movePlayerMouse(sessionId, position) {
+        const player = this._getPlayer(sessionId);
+        if (player != null) {
+            player.cursorX = position.x;
+            player.cursorY = position.y;
+        }
+    }
 }
 exports.State = State;
 __decorate([

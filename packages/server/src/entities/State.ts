@@ -64,4 +64,12 @@ export class State extends Schema {
       player.y += movement.y;
     }
   }
+
+  movePlayerMouse(sessionId: string, position: {x: number, y: number}) {
+    const player = this._getPlayer(sessionId);
+    if (player != null) {
+      player.cursorX = position.x;
+      player.cursorY = position.y;
+    }
+  }
 }

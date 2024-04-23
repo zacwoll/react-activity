@@ -17,29 +17,37 @@ class Player extends schema_1.Schema {
         this.avatarUri = avatarUri;
         this.name = name;
         this.sessionId = sessionId;
-        this.x = Math.round(Math.random() * 1000);
-        this.y = Math.round(Math.random() * 1000);
+        this.x = Math.round(Math.random() * 500);
+        this.y = Math.round(Math.random() * 500);
+        this.cursorX = 0;
+        this.cursorY = 0;
     }
 }
 exports.Player = Player;
 __decorate([
-    (0, schema_1.type)('string')
+    (0, schema_1.type)("string")
 ], Player.prototype, "sessionId", void 0);
 __decorate([
-    (0, schema_1.type)('string')
+    (0, schema_1.type)("string")
 ], Player.prototype, "userId", void 0);
 __decorate([
-    (0, schema_1.type)('string')
+    (0, schema_1.type)("string")
 ], Player.prototype, "avatarUri", void 0);
 __decorate([
-    (0, schema_1.type)('string')
+    (0, schema_1.type)("string")
 ], Player.prototype, "name", void 0);
 __decorate([
-    (0, schema_1.type)('boolean')
+    (0, schema_1.type)("boolean")
 ], Player.prototype, "talking", void 0);
 __decorate([
-    (0, schema_1.type)('number')
+    (0, schema_1.type)("number")
 ], Player.prototype, "x", void 0);
 __decorate([
-    (0, schema_1.type)('number')
+    (0, schema_1.type)("number")
 ], Player.prototype, "y", void 0);
+__decorate([
+    (0, schema_1.type)("number")
+], Player.prototype, "cursorX", void 0);
+__decorate([
+    (0, schema_1.type)("number")
+], Player.prototype, "cursorY", void 0);

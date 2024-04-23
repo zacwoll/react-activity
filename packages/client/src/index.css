@@ -5,6 +5,12 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  cursor: none;
+}
+
+* {
+  cursor: none;
+  pointer-events: none;
 }
 
 body {
