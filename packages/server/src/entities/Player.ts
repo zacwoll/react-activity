@@ -1,6 +1,6 @@
 import {Schema, type} from '@colyseus/schema';
 
-export type TPlayerOptions = Pick<Player, 'sessionId' | 'userId' | 'name' | 'avatarUri' | 'talking' | 'x' | 'y' | 'cursorX' | 'cursorY'>;
+export type TPlayerOptions = Pick<Player, 'sessionId' | 'userId' | 'name' | 'avatarUri' | 'talking' | 'cursorX' | 'cursorY'>;
 
 export class Player extends Schema {
   @type("string")
@@ -19,12 +19,6 @@ export class Player extends Schema {
   public talking: boolean = false;
 
   @type("number")
-  public x: number;
-
-  @type("number")
-  public y: number;
-
-  @type("number")
   public cursorX: number;
 
   @type("number")
@@ -37,8 +31,6 @@ export class Player extends Schema {
     this.avatarUri = avatarUri;
     this.name = name;
     this.sessionId = sessionId;
-    this.x = Math.round(Math.random() * 500);
-    this.y = Math.round(Math.random() * 500);
     this.cursorX = 0;
     this.cursorY = 0;
   }

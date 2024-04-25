@@ -57,14 +57,6 @@ export class State extends Schema {
     }
   }
 
-  movePlayer(sessionId: string, movement: {x: number, y: number}) {
-    const player = this._getPlayer(sessionId);
-    if (player != null) {
-      player.x += movement.x;
-      player.y += movement.y;
-    }
-  }
-
   movePlayerMouse(sessionId: string, position: {x: number, y: number}) {
     const player = this._getPlayer(sessionId);
     if (player != null) {

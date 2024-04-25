@@ -17,10 +17,6 @@ export class StateHandlerRoom extends Room<State> {
       this.state.stopTalking(client.sessionId);
     });
 
-    this.onMessage('move', (client, _data) => {
-      this.state.movePlayer(client.sessionId, _data);
-    })
-
     this.onMessage('mouseMove', (client, _data) => {
       this.state.movePlayerMouse(client.sessionId, _data);
     })
